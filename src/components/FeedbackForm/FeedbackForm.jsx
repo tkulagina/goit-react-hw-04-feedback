@@ -8,15 +8,15 @@ import {Notification} from '../Notification/Notification.jsx';
 import css from './FeedbackForm.module.css';
 
 
-export function FeedbackForm () {
-  const [good, setGood] = useState (0);
-  const [neutral, setNeutral] = useState (0);
-  const [bad, setBad] = useState (0);
+export const FeedbackForm = () => {
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
 
   const countTotalFeedback = good + neutral + bad;
   const countPositiveFeedbackPercentage = Math.round((good / countTotalFeedback) * 100);
   
-  const handleCounter = (event) => {
+  function handleCounter(event) {
     switch (event.target.name) {
       case 'good':
       setGood (good + 1);
@@ -31,7 +31,8 @@ export function FeedbackForm () {
       break;
 
       default:
-      break}
+      break
+    }
  }
         
  return (

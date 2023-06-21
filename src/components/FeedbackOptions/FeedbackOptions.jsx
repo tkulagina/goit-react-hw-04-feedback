@@ -4,7 +4,9 @@ import css from './FeedbackOptions.module.css'
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   console.log (options);
+
   const optionList = Object.keys(options);
+  console.log (optionList);
   return (
     <ul className={css.option}>
       {optionList.map(option => (
