@@ -19,17 +19,17 @@ export const FeedbackForm = () => {
   function handleCounter(event) {    
     switch (event.target.name) {
       case 'good':
-      setGood (good + 1);      
+      setGood ((prevGood) => prevGood + 1);      
       break;
 
       case 'neutral':
-      setNeutral (neutral + 1);
+      setNeutral ((neutral) => neutral + 1);
       break;
 
       case 'bad':
       setBad (bad + 1);
       break;
-
+/*різні варіанти залишаю собі на згадку*/ 
       default:
       break
     }
